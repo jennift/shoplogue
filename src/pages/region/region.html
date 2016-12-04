@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="light">
+  	<ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>
+      Select Country
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <!--<ion-item *ngFor="let country of countries">
+      {{country}}
+    </ion-item>
+
+
+    <ion-item *ngFor="let country of countries">
+      <input type="checkbox" name="options" value="{{country}}" ngControl="country" [(ngModel)]="country['checked']" /> {{country}}
+    </ion-item>-->
+
+    <ion-item *ngFor="let country of countries">
+      <ion-label>{{country.display}}</ion-label>
+      <ion-checkbox [ngModel]="country.value" (click)="onNotify($event)"></ion-checkbox>
+    </ion-item>
+
+    <!--<ion-item>
+    <ion-label>Pepperoni</ion-label>
+    <ion-checkbox [(ngModel)]="pepperoni" checked="true"></ion-checkbox>
+  </ion-item>-->
+
+
+  </ion-list>
+</ion-content>

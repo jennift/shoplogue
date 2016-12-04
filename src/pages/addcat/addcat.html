@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar color="light">
+		<ion-searchbar
+			[(ngModel)]="searchTerm"
+			(ionInput)="setFilteredItems()">
+		</ion-searchbar>
+		<ion-buttons end>
+		    <button ion-button icon-only (click)="openModal(regionPage)">
+		        <ion-icon name="pin"></ion-icon>
+		    </button>
+		    <button ion-button icon-only>
+				<ion-icon name="add" item-right></ion-icon>
+		    </button>
+		</ion-buttons>		
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+
+  	<ion-list no-lines>
+		<ion-item *ngFor="let item of items">
+			<ion-avatar item-left><img src="../assets/avatar/{{item.avatar}}.jpg" /></ion-avatar>
+			<ion-label>{{item.title}}</ion-label>
+			<ion-checkbox [checked]="item.checked" item-right></ion-checkbox>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+@import "../../theme/variables.scss";
+
+page-addcat {
+}
+
+.searchbar-md .searchbar-input {
+	box-shadow:none;
+	padding: 6px 55px 6px 0px;
+}
+
+.searchbar-search-icon {
+	display:none;
+}
+
+.checkbox-md .checkbox-icon {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    border-color: rgb(255, 255, 255);
+}
+
+.checkbox-md .checkbox-checked {
+    border-color: #fff;
+    background-color: #fff;
+    & .checkbox-inner {
+    	border-color: map-get($colors, shopcyan);
+    }
+}
