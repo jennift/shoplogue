@@ -1,0 +1,32 @@
+page-suggest {    
+    ion-label, .select-text {
+        color:#fff;
+    }
+    ion-input, ion-select, ion-textarea {
+        border-bottom: 1px solid #fff;
+    }
+    .form-spacer {
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+    /*.light-bg {
+        background-color: $light-background;
+    }*/
+}
+
+
+
+/*overwrite main.css*/
+
+.item-md {
+    p {
+        color: #f00;
+    }
+}
+
+.item-input, .item-select, .item-datetime {
+    .label-md {
+        color:#fff;
+    }
+}
+

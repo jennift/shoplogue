@@ -5,10 +5,10 @@
 			(ionInput)="setFilteredItems()">
 		</ion-searchbar>
 		<ion-buttons end>
-		    <button ion-button icon-only (click)="openModal(regionPage)">
+		    <button ion-button icon-only (click)="openRegionPage()">
 		        <ion-icon name="pin"></ion-icon>
 		    </button>
-		    <button ion-button icon-only>
+		    <button ion-button icon-only (click)="openSuggestPage()">
 				<ion-icon name="add" item-right></ion-icon>
 		    </button>
 		</ion-buttons>		

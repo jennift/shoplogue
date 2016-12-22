@@ -6,6 +6,7 @@ import { ShoplistPage } from '../pages/shoplist/shoplist';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AddCatPage } from '../pages/addcat/addcat';
 import { RegionPage } from '../pages/region/region';
+import { SuggestPage } from '../pages/suggest/suggest';
 
 import { Data } from '../providers/data';
 
@@ -16,7 +17,8 @@ import { Data } from '../providers/data';
     ShoplistPage,
     TabsPage,
     AddCatPage,
-    RegionPage
+    RegionPage,
+    SuggestPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -31,7 +33,8 @@ import { Data } from '../providers/data';
     ShoplistPage,
     TabsPage,
     AddCatPage,
-    RegionPage
+    RegionPage,
+    SuggestPage
   ],
   providers: [
     Data

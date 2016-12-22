@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { NavController, ModalController, NavParams } from 'ionic-angular';
+import { Component} from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import { FormControl } from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
 import { Data } from '../../providers/data';
 import { RegionPage } from '../region/region';
+import { SuggestPage } from '../suggest/suggest';
 
 @Component({
   selector: 'page-addcat',
@@ -16,8 +17,9 @@ export class AddCatPage {
   searchControl: FormControl;
   items: any;
   regionPage: RegionPage;
+  suggestPage:SuggestPage;
 
-  constructor(public navCtrl: NavController, public dataService: Data, public modalCtrl: ModalController, public params: NavParams) {
+  constructor(public navCtrl: NavController, public dataService: Data, public params: NavParams) {
   	this.searchControl = new FormControl();
   }
 
@@ -43,9 +45,14 @@ export class AddCatPage {
   	this.items = this.dataService.filterItems(this.searchTerm);
   }
 
-  openModal(regionPage) {
-    let modal = this.modalCtrl.create(RegionPage, regionPage);
-    modal.present();
+  openRegionPage() {
+    this.navCtrl.push(RegionPage);
+  }
+
+  openSuggestPage() {
+    //push another page onto the history stack
+    //causing the nav controller to animate the new page in
+    this.navCtrl.push(SuggestPage);
   }
 
 }

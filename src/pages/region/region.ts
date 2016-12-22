@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController, AlertController } from 'ionic-angular';
-import { Country } from '../../providers/datacountry';
 
 @Component({
   templateUrl: 'region.html'
@@ -8,8 +7,6 @@ import { Country } from '../../providers/datacountry';
 
 export class RegionPage {
   	
-	selected:any;
-
 	countries = [
     	{ value: 'australiamoomoo', display: 'Australia', checked: true },
     	{ value: 'us', display: 'United States' },
@@ -33,10 +30,5 @@ export class RegionPage {
 	//  });
 	//  alert.present();
 	//}
-
-	onNotify($event) {
-    	this.selected = $event.target.value; 
-    	console.log(this.selected);
-  	}
 
 }

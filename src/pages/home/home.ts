@@ -10,6 +10,7 @@ import { AddCatPage } from '../addcat/addcat';
 export class HomePage {
 	
   	addcatPage = AddCatPage;
+    
     @ViewChild('mySlider') slider: Slides;
 
     mySlideOptions = {

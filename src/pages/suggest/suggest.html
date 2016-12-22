@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title text-center>
+      Suggest a Catalogue
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines>
+    <form [formGroup]="suggestForm">
+
+      <ion-item>
+        <ion-label stacked><div class="form-spacer">Country</div></ion-label>
+        <ion-select formControlName="country" [class.invalid]="!suggestForm.controls.country.valid && (suggestForm.controls.country.dirty || submitAttempt)">
+          <ion-option value="Australia">Australia</ion-option>
+          <ion-option value="US">United States</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!suggestForm.controls.country.valid  && (suggestForm.controls.country.dirty || submitAttempt)">
+          <p>Please select a country</p>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label stacked><div class="form-spacer">Company</div></ion-label>
+        <ion-input formControlName="company" type="text" [class.invalid]="!suggestForm.controls.company.valid && (suggestForm.controls.company.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!suggestForm.controls.company.valid  && (suggestForm.controls.company.dirty || submitAttempt)">
+          <p>Please enter a company or brand name</p>
+      </ion-item>
+
+
+      
+      <ion-item>
+        <ion-label stacked><div class="form-spacer">Website URL</div></ion-label>
+        <ion-input formControlName="url" type="text" [class.invalid]="!suggestForm.controls.url.valid && (suggestForm.controls.url.dirty || submitAttempt)"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!suggestForm.controls.url.valid  && (suggestForm.controls.url.dirty || submitAttempt)">
+          <p>Please enter a valid URL</p>
+      </ion-item>
+
+    
+    </form>
+  </ion-list>
+</ion-content>
