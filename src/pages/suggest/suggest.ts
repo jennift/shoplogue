@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -13,10 +13,9 @@ export class SuggestPage {
 
 	submitAttempt: boolean = false;
   	
-	constructor(public navCtrl: NavController, public formBuilder: FormBuilder) {
+	constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public navParams: NavParams) {
 	
 		this.suggestForm = formBuilder.group({
-			//country: ['select', CountryValidator.isValid],
 			country: ['', Validators.required],
 			company:['', Validators.compose([Validators.minLength(1), Validators.required])],
 			url: ['', Validators.compose([Validators.minLength(5), Validators.required])]
@@ -24,7 +23,7 @@ export class SuggestPage {
 
 	}
 
-	save() {
+	submitSuggest() {
 
 		this.submitAttempt = true;
 
@@ -33,4 +32,5 @@ export class SuggestPage {
 			console.log(this.suggestForm.value);
 		}
 	}
+
 }

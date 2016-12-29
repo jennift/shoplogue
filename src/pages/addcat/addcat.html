@@ -15,14 +15,14 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 	<ion-refresher (ionRefresh)="doRefresh($event)">
     	<ion-refresher-content></ion-refresher-content>
   	</ion-refresher>
 
   	<ion-list no-lines>
 		<ion-item *ngFor="let item of items">
-			<ion-avatar item-left><img src="../assets/avatar/{{item.avatar}}.jpg" /></ion-avatar>
+			<ion-avatar item-left><img src="assets/avatar/{{item.avatar}}.jpg" /></ion-avatar>
 			<ion-label>{{item.title}}</ion-label>
 			<ion-checkbox [checked]="item.checked" item-right></ion-checkbox>
 		</ion-item>

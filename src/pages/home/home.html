@@ -14,20 +14,47 @@
 
 <ion-content>
 
-  <ion-slides #mySlider [options]="mySlideOptions">
-    <ion-slide>
-      <ion-icon class="cart" ios="ios-cart-outline" md="ios-cart-outline"></ion-icon>
-      <h3 class="lead">Create your shopping lists with catalogues</h3>
-      <h5 class="lead">Tap + to add a catalogue to start your lists.</h5>
-    </ion-slide>
-    <ion-slide>
-      <ion-icon class="drag" ios="ios-open-outline" md="ios-open-outline"></ion-icon>
-      <h5 class="lead">Hold and drag your finger over the item you want in the catalogue to add it to your shopping list.</h5>
-    </ion-slide>
-  </ion-slides>
+  <ion-grid>
+    
+    <ion-row >
+      <ion-col width-50>
+        <img src="assets/img/testbg.jpg" />
+        <div>
+          <h5>Title</h5>
+          Valid until 31/10/2016
+        </div>
+      </ion-col>
+      <ion-col width-50>
+        <img src="assets/img/testbg.jpg" />
+        <div>
+          <h5>Title</h5>
+          Valid until 31/10/2016
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col width-50>
+        <img src="assets/img/testbg.jpg" />
+        <div>
+          <h5>Title</h5>
+          Valid until 31/10/2016
+        </div>
+      </ion-col>
+      <ion-col width-50>
+        <img src="assets/img/testbg.jpg" />
+        <div>
+          <h5>Title</h5>
+          Valid until 31/10/2016
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 
   <ion-fab right bottom>
     <button ion-fab color="light" [navPush]="addcatPage"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
 </ion-content>
+

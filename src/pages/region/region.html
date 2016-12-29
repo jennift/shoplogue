@@ -12,17 +12,11 @@
 </ion-header>
 
 
-<ion-content>
-
-  <ion-list>
+<ion-content padding>
+  <ion-list no-lines>
     <ion-item *ngFor="let country of countries">
       <ion-label>{{country.display}}</ion-label>
-      <ion-checkbox [ngModel]="country.value" (click)="onNotify($event)"></ion-checkbox>
+      <ion-checkbox item-right [ngModel]="country.value"></ion-checkbox>
     </ion-item>
-
-    
-
-
   </ion-list>
-  
 </ion-content>

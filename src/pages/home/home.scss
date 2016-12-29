@@ -18,10 +18,30 @@ ion-slides {
 
 ion-grid {
 	padding:0;
+	margin:0;
+	ion-row {
+		padding:0;
+		margin:0;
+		ion-col {
+		    padding: 0;
+		    margin: 0;
+		    border-bottom: 2px solid transparent;
+		    position:relative;
+		    &:first-child {
+		    	border-right: 1px solid transparent;
+		    }
+		    &:last-child {
+		    	border-left: 1px solid transparent;
+		    }
+		    div {
+		    	position: absolute;
+		    	z-index:100;
+		    	background:#000;
+		    	width:100%;
+		    	bottom:0;
+		    	padding:0 15px 15px;
+		    }
+		}
+	}
 }
-ion-col {
-    padding: 0;
-    margin:0;
-    border: 1px solid #ddd;
-    text-align: center;
-}
+

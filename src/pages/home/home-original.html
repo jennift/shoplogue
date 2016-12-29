@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="shopcyan">
+    <ion-title text-center>
+      Shoplogue
+    </ion-title>
+    <ion-buttons end>
+	    <button ion-button clear icon-only color="light">
+	  		<ion-icon name="settings"></ion-icon>
+		  </button>
+	 </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-slides #mySlider [options]="mySlideOptions">
+    <ion-slide>
+      <ion-icon class="cart" ios="ios-cart-outline" md="ios-cart-outline"></ion-icon>
+      <h3 class="lead">Create your shopping lists with catalogues</h3>
+      <h5 class="lead">Tap + to add a catalogue to start your lists.</h5>
+    </ion-slide>
+    <ion-slide>
+      <ion-icon class="drag" ios="ios-open-outline" md="ios-open-outline"></ion-icon>
+      <h5 class="lead">Hold and drag your finger over the item you want in the catalogue to add it to your shopping list.</h5>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light" [navPush]="addcatPage"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

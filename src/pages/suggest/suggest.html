@@ -4,7 +4,7 @@
       Suggest a Catalogue
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="save()">
+      <button ion-button icon-only (click)="submitSuggest()">
         <ion-icon name="checkmark"></ion-icon>
       </button>
     </ion-buttons>
@@ -14,7 +14,7 @@
 
 <ion-content padding>
   <ion-list no-lines>
-    <form [formGroup]="suggestForm">
+    <form [formGroup]="suggestForm" (ngSubmit)="onSubmit()">
 
       <ion-item>
         <ion-label stacked><div class="form-spacer">Country</div></ion-label>
