@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
+import { FileOpener} from 'ionic-native';
 import { AddCatPage } from '../addcat/addcat';
+import { CatViewPage } from '../catview/catview';
 
 @Component({
   selector: 'page-home',
@@ -9,15 +11,37 @@ import { AddCatPage } from '../addcat/addcat';
 
 export class HomePage {
 	
-  	addcatPage = AddCatPage;
+	addcatPage = AddCatPage;
+  catviewPage = CatViewPage;
+  
+  @ViewChild('mySlider') slider: Slides;
+
+  mySlideOptions = {
+    pager: true
+  };
+
+	constructor(public navCtrl: NavController) {	
+  }
+
+  openPdf () {
+    cordova.plugins.fileOpener2.open(
+      'assets/pdf/coles.pdf',
+      'application/pdf', 
+      {
+        error : function(e) { 
+          console.log('Error status: ' + e.status + ' - Error message: ' + e.message);
+        },
+        success : function () {
+          console.log('file opened successfully');                
+        }
+      } 
+    );
+  }
     
-    @ViewChild('mySlider') slider: Slides;
+    
 
-    mySlideOptions = {
-      pager: true
-    };
-
-  	constructor(public navCtrl: NavController) {	
-    }
+    //openPDF() {
+      //this.navCtrl.push(CatViewPage);
+    //}
 
 }

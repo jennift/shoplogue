@@ -7,6 +7,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AddCatPage } from '../pages/addcat/addcat';
 import { RegionPage } from '../pages/region/region';
 import { SuggestPage } from '../pages/suggest/suggest';
+import { CatViewPage } from '../pages/catview/catview';
 
 import { Data } from '../providers/data';
 
@@ -18,7 +19,8 @@ import { Data } from '../providers/data';
     TabsPage,
     AddCatPage,
     RegionPage,
-    SuggestPage
+    SuggestPage,
+    CatViewPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -34,7 +36,8 @@ import { Data } from '../providers/data';
     TabsPage,
     AddCatPage,
     RegionPage,
-    SuggestPage
+    SuggestPage,
+    CatViewPage
   ],
   providers: [
     Data
