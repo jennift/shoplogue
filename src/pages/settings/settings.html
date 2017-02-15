@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list no-lines>
+  	<button ion-item icon-left [navPush]="regionPage">
+  		<ion-icon name="pin" item-left></ion-icon>
+  		<ion-label>Select Country</ion-label>
+  	</button>
+  	<hr>
+  	<button ion-item icon-left>
+  		<ion-icon name="notifications" item-left></ion-icon>
+  		<ion-label>Notifications</ion-label>
+  		<ion-toggle color="light" value="notify" checked="true"></ion-toggle>
+  	</button>
+  	<hr>
+  	<button ion-item icon-left [navPush]="suggestPage">
+  		<ion-icon name="add" item-left></ion-icon>
+  		<ion-label>Suggest a Catalogue</ion-label>
+  	</button>
+  	<hr>
+  	<button ion-item icon-left>
+  		<ion-icon name="star" item-left></ion-icon>
+  		<ion-label>Rate</ion-label>
+  	</button>
+  	<hr>
+  	<button ion-item icon-left (click)="ShareNow()">
+  		<ion-icon name="share" item-left></ion-icon>
+  		<ion-label>Share</ion-label>
+  	</button>
+  	<hr>
+  </ion-list>
+</ion-content>

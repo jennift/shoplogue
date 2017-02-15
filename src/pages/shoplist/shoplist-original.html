@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="shopcyan">
+    <ion-title text-center>
+      Shoplogue
+    </ion-title>
+    <ion-buttons end>
+	    <button ion-button clear icon-only color="light" [navPush]="settingsPage">
+	  		<ion-icon name="settings"></ion-icon>
+		</button>
+	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-slides>
+    <ion-slide>
+      <ion-icon ios="ios-list-box-outline" md="ios-list-box-outline"></ion-icon>
+      <h3 class="lead">You have no shopping lists</h3>
+      <h5 class="lead">Browse through your catalogues to start your shopping lists.</h5>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

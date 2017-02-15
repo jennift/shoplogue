@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-shoplist',
@@ -7,8 +8,10 @@ import { NavController } from 'ionic-angular';
 })
 
 export class ShoplistPage {
+
+	settingsPage = SettingsPage;
   
 	constructor(public navCtrl: NavController) {
 	}
-
+	
 }

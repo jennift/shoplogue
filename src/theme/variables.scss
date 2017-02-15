@@ -13,6 +13,7 @@
 $text-color:        #fff;
 $background-color:  #03c4d6;
 $light-background:	#fff;
+$white:				#fff;
 
 
 // Named Color Variables
@@ -37,14 +38,24 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+$toggle-ios-background-color-off: darken( $light-background, 70% );
 
-
-
+$checkbox-ios-icon-border-width: 1px;
+$checkbox-ios-icon-border-color-off: $white;
+$checkbox-ios-icon-border-color-on: $white;
+$checkbox-ios-background-color-on: $white;
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$toggle-md-handle-background-color-off: darken( $light-background, 70% );
 
+$checkbox-md-border-width: 1px;
+$checkbox-md-border-style: solid;
+$checkbox-md-icon-border-radius: 50%;
+$checkbox-md-icon-border-color-off: $white;
+$checkbox-md-icon-border-color-on: $white;
+$checkbox-md-icon-background-color-on: $white;
 
 
 

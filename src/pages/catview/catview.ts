@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { InAppBrowser } from 'ionic-native';
 
 @Component({
   selector: 'page-catview',
@@ -7,8 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 
 export class CatViewPage {
-  
-	constructor(public navCtrl: NavController) {
+  	
+	public urlParam:any;
+
+	constructor(public navCtrl: NavController, public params:NavParams) {
+		//this.urlParam = params.get("thisPDF");
+		//console.log(this.urlParam);
+		//new InAppBrowser(this.urlParam);
 	}
 
 }

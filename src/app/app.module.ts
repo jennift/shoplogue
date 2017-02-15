@@ -8,6 +8,8 @@ import { AddCatPage } from '../pages/addcat/addcat';
 import { RegionPage } from '../pages/region/region';
 import { SuggestPage } from '../pages/suggest/suggest';
 import { CatViewPage } from '../pages/catview/catview';
+import { SettingsPage } from '../pages/settings/settings';
+import { ShopItem } from '../pages/shoplist/shopitem';
 
 import { Data } from '../providers/data';
 
@@ -20,7 +22,9 @@ import { Data } from '../providers/data';
     AddCatPage,
     RegionPage,
     SuggestPage,
-    CatViewPage
+    CatViewPage,
+    SettingsPage,
+    ShopItem
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -37,7 +41,9 @@ import { Data } from '../providers/data';
     AddCatPage,
     RegionPage,
     SuggestPage,
-    CatViewPage
+    CatViewPage,
+    SettingsPage,
+    ShopItem
   ],
   providers: [
     Data

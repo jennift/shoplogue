@@ -11,18 +11,3 @@ page-addcat {
 .searchbar-search-icon {
 	display:none;
 }
-
-.checkbox-md .checkbox-icon {
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 0;
-    border-color: rgb(255, 255, 255);
-}
-
-.checkbox-md .checkbox-checked {
-    border-color: #fff;
-    background-color: #fff;
-    & .checkbox-inner {
-    	border-color: map-get($colors, shopcyan);
-    }
-}

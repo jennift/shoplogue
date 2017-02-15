@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
-import { FileOpener} from 'ionic-native';
+import { NavController, Slides} from 'ionic-angular';
+import { InAppBrowser } from 'ionic-native';
 import { AddCatPage } from '../addcat/addcat';
 import { CatViewPage } from '../catview/catview';
+import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-home',
@@ -10,9 +11,10 @@ import { CatViewPage } from '../catview/catview';
 })
 
 export class HomePage {
-	
+
 	addcatPage = AddCatPage;
   catviewPage = CatViewPage;
+  settingsPage = SettingsPage;
   
   @ViewChild('mySlider') slider: Slides;
 
@@ -20,28 +22,20 @@ export class HomePage {
     pager: true
   };
 
-	constructor(public navCtrl: NavController) {	
+	constructor(public navCtrl: NavController) {
   }
 
-  openPdf () {
-    cordova.plugins.fileOpener2.open(
-      'assets/pdf/coles.pdf',
-      'application/pdf', 
-      {
-        error : function(e) { 
-          console.log('Error status: ' + e.status + ' - Error message: ' + e.message);
-        },
-        success : function () {
-          console.log('file opened successfully');                
-        }
-      } 
-    );
-  }
-    
-    
+  openPDF(url) {   
+    //this.navCtrl.push(CatViewPage, {
+      //thisPDF: url
+    //});
+  
+    //opens a empty white page?? heh
+    //new InAppBrowser(url, "_self", "location=no,toolbar=yes");
 
-    //openPDF() {
-      //this.navCtrl.push(CatViewPage);
-    //}
+    //this code below downloads the pdf into your phone
+    //window.open('https://manager.salefinder.com.au/uploads/pdf/COLVICMETRO180117.pdf', '_system', 'location=no,closebuttoncaption=Close,enableViewportScale=yes')
+    
+  }
 
 }

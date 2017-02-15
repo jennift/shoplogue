@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "0.0.48",
+    "@types/node": "^7.0.0",
     "typescript": "2.0.6"
   },
   "description": "Shoplogue: An Ionic project",
@@ -35,7 +36,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-file"
   ],
   "cordovaPlatforms": []
 }
